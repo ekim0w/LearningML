@@ -6,7 +6,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import RMSprop
 
-df = pd.read_csv("name.csv", sep =";", decimal = ',')  # замени на имя своего файла
+df = pd.read_csv("name.csv", sep =";", decimal = ',')
 
 print(df.head())
 print(df.columns)
@@ -25,7 +25,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 # 3 Модеlь
 model = Sequential([
     Dense(16, activation='relu', input_shape=(X_train.shape[1],)),
-    # Dense(16, activation='relu'),
     Dense(1, activation='linear')
 ])
 
